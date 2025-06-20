@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuestPhone</title>
+    <link rel="icon" type="image/png" href="icon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">questphone</a>
+            <ul class="nav-links">
+                <li><a href="#features">features</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="social.html">social</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger-menu" aria-label="Open navigation" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="mobile-nav" id="mobileNav">
+            <button class="mobile-nav-close" id="closeMobileNav" aria-label="Close navigation">&times;</button>
+            <ul class="nav-links">
+                <li><a href="#features" onclick="closeMobileNav()">features</a></li>
+                <li><a href="about.html" onclick="closeMobileNav()">about</a></li>
+                <li><a href="social.html" onclick="closeMobileNav()">social</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>earn your screen time</h1>
+                <p class="subtitle">unlock apps by completing real-world quests</p>
+                <a href="#" class="cta-button">start your journey</a>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="container">
+                <h2>core mechanics</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>app blocking</h3>
+                        <p>social media and games are locked until you complete your daily quests. no cheating allowed.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⏱️</div>
+                        <h3>time rewards</h3>
+                        <p>earn screen time minutes by finishing tasks. more productive = more entertainment time.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>gamification</h3>
+                        <p>level up, earn coins, use items and more</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="240">0</div>
+                        <div class="stat-label">minutes earned today</div>
+                    </div>=
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="89">0</div>
+                        <div class="stat-label">quest completion rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="52">0</div>
+                        <div class="stat-label">productive users</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 questphone. level up responsibly.</p>
+        </div>
+    </footer>
+
+    <!-- Theme config for easy customization -->
+    <script src="js/theme-config.js"></script>
+    <!-- Main theme script -->
+    <script src="js/main.js"></script>
+</body>
+</html>

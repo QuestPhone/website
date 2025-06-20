@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Links - QuestPhone</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <!-- HEADER -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">questphone</a>
+            <ul class="nav-links">
+                <li><a href="index.html#features">features</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="social.html">social</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger-menu" aria-label="Open navigation" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="mobile-nav" id="mobileNav">
+            <button class="mobile-nav-close" id="closeMobileNav" aria-label="Close navigation">&times;</button>
+            <ul class="nav-links">
+                <li><a href="index.html#features" onclick="closeMobileNav()">features</a></li>
+                <li><a href="about.html" onclick="closeMobileNav()">about</a></li>
+                <li><a href="social.html" onclick="closeMobileNav()">social</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <!-- SOCIAL LINKS SECTION -->
+        <section class="hero">
+            <div class="container">
+                <h1>connect with us</h1>
+                <p class="subtitle">Follow QuestPhone and join our community online.</p>
+            </div>
+        </section>
+        <section class="features" id="social-links">
+            <div class="container">
+                <h2>find us online</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💬</div>
+                        <h3>discord</h3>
+                        <p><a href="https://discord.gg/RGuqaMHxAw" target="_blank" rel="noopener" style="color:#00ff88;">Join our Discord</a></p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📸</div>
+                        <h3>instagram</h3>
+                        <p><a href="https://instagram.com/questphone.app" target="_blank" rel="noopener" style="color:#00ff88;">@questphone</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 questphone. level up responsibly.</p>
+        </div>
+    </footer>
+    <script src="js/theme-config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

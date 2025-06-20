@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - QuestPhone</title>
+    <link rel="icon" type="image/png" href="icon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <!-- HEADER -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">questphone</a>
+            <ul class="nav-links">
+                <li><a href="index.html#features">features</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="social.html">social</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger-menu" aria-label="Open navigation" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="mobile-nav" id="mobileNav">
+            <button class="mobile-nav-close" id="closeMobileNav" aria-label="Close navigation">&times;</button>
+            <ul class="nav-links">
+                <li><a href="index.html#features" onclick="closeMobileNav()">features</a></li>
+                <li><a href="about.html" onclick="closeMobileNav()">about</a></li>
+                <li><a href="social.html" onclick="closeMobileNav()">social</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <!-- ABOUT SECTION -->
+        <section class="hero">
+            <div class="container">
+                <h1>about questphone</h1>
+                <p class="subtitle">Our mission is to help you earn your build better digital habits.</p>
+            </div>
+        </section>
+        <section class="features" id="about-details">
+            <div class="container">
+                <h2>why questphone?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h3>mindful tech</h3>
+                        <p>We believe technology should empower you, not distract you. QuestPhone helps you stay focused and intentional.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>real progress</h3>
+                        <p>Complete daily quests that align with your goals and unlock your favorite apps as a reward for real-world achievements.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h3>more than a checkbox</h3>
+                        <p>intuitive ways like aisnap and more to verify if you really performed a quest</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h3>community</h3>
+                        <p>Join a growing community of productive users who are leveling up their lives, one quest at a time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 questphone. level up responsibly.</p>
+        </div>
+    </footer>
+    <script src="js/theme-config.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Mobile navigation functionality
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const mobileNav = document.getElementById('mobileNav');
+        const closeMobileNav = document.getElementById('closeMobileNav');
+
+        hamburgerMenu.addEventListener('click', () => {
+            mobileNav.classList.add('active');
+        });
+
+        closeMobileNav.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+        });
+
+        // Close mobile nav when clicking outside
+        window.addEventListener('click', (e) => {
+            if (mobileNav.classList.contains('active') && e.target !== mobileNav && e.target !== hamburgerMenu) {
+                mobileNav.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
