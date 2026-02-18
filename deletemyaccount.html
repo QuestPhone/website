@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete My Account</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #fff;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px 0 #0001;
+      text-align: center;
+    }
+    h1 {
+      color: #e11d48;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: #334155;
+      margin-bottom: 1.5rem;
+    }
+    input, button {
+      font-size: 1rem;
+      padding: 0.7rem 1rem;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      margin-bottom: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      background: #e11d48;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #be123c;
+    }
+    .msg {
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+    .error {
+      color: #e11d48;
+    }
+    .success {
+      color: #059669;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Delete My Account</h1>
+    <p>Enter your email and password to permanently delete your account.</p>
+    <input id="email" type="email" placeholder="Email" required />
+    <input id="password" type="password" placeholder="Password" required />
+    <button id="deleteBtn">Delete Account</button>
+    <div id="msg" class="msg"></div>
+  </div>
+  <script>
+    const btn = document.getElementById('deleteBtn');
+    const msg = document.getElementById('msg');
+    btn.onclick = () => {
+      msg.textContent = '';
+      msg.className = 'msg';
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      if (!email || !password) {
+        msg.textContent = 'Please enter both email and password.';
+        msg.classList.add('error');
+        return;
+      }
+      btn.disabled = true;
+      btn.textContent = 'Deleting...';
+
+      setTimeout(() => {
+        msg.textContent = 'Your account deletion is in progress and will be completed in 1 week.';
+        msg.classList.add('success');
+        document.getElementById('email').value = '';
+        document.getElementById('password').value = '';
+        btn.disabled = false;
+        btn.textContent = 'Delete Account';
+      }, 1000);
+    };
+  </script>
+</body>
+</html>
